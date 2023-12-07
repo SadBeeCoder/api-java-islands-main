@@ -1,0 +1,40 @@
+### Register a new user
+POST {{host}}/register
+Content-Type: application/json
+
+{
+  "userName": "newuser",
+  "password": "newpassword"
+}
+
+### Login request
+POST {{host}}/login
+Content-Type: application/x-www-form-urlencoded
+
+username=newuser
+&password=newpassword
+
+### Logout request
+POST {{host}}/logout
+
+### Access blocked ressource (user)
+GET {{host}}/greeting-user
+
+### Access blocked ressource (admin)
+GET {{host}}/greeting-admin
+
+### Public endpoint
+GET {{host}}/greeting
+
+### Testing Taskresult (Publish)
+POST {{host}}/user
+Content-Type: application/json
+
+{
+
+  "username": "username",
+  "level" : 1
+}
+
+### Testing Taskresult (Retrieve result)
+GET {{host}}/username
